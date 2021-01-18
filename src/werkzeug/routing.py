@@ -148,7 +148,7 @@ _rule_re = re.compile(
     <
     (?:
         (?P<converter>[a-zA-Z_][a-zA-Z0-9_]*)   # converter name
-        (?:\((?P<args>.*?)\))?                  # converter arguments
+        (?:\((?P<args>.*)\))?                   # converter arguments
         \:                                      # variable delimiter
     )?
     (?P<variable>[a-zA-Z_][a-zA-Z0-9_]*)        # variable name
@@ -166,7 +166,7 @@ _converter_args_re = re.compile(
         \d+.|
         \d+|
         [\w\d_.]+|
-        [urUR]?(?P<stringval>"[^"]*?"|'[^']*')
+        [urUR]?(?P<stringval>"[^"]*"|'[^']*')
     )\s*,
     """,
     re.VERBOSE,
